@@ -3,6 +3,8 @@ import cors from 'cors';
 import 'dotenv/config';
 import routes from './routes';
 
+import models, { connectDb } from './models';
+
 const app = express();
 
 const port = process.env.port || 3000;
@@ -25,4 +27,6 @@ app.get('*', (req, res) => {
   res.send('catchall GET');
 });
 
-app.listen(port, () => console.log(`app listening on port ${port}`));
+connectDb().then(async () => {
+  app.listen(port, () => console.log(`app listening on port ${port}`));
+});

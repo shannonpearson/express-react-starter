@@ -1,7 +1,13 @@
 import { Router } from 'express';
 
+import User from '../../db/models/user';
+
 const router = Router();
 
-router.get('/', (req, res) => res.send('Received get request for USER'));
+router.get('/', async (req, res) => {
+  const { username } = req.params;
+  const user = await User.findByLogin(username);
+  res.send('Received get request for USER');
+});
 
 export default router;
