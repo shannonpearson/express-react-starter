@@ -1,4 +1,6 @@
 /* eslint-disable no-path-concat */
+const webpack = require('webpack');
+
 module.exports = {
   entry: './src/client/index.js',
   module: {
@@ -18,8 +20,10 @@ module.exports = {
     publicPath: '/',
     filename: 'bundle.js',
   },
+  plugins: [new webpack.HotModuleReplacementPlugin()],
   devServer: {
     contentBase: './dist',
+    hot: true,
   },
   externals: ['fs', 'net'],
 };

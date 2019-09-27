@@ -2,6 +2,10 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 
-const title = 'React with Weback and Babel';
+import App from './App';
 
-ReactDOM.render(<div>{title}</div>, document.getElementById('app'));
+const title = 'React with Weback and Babel (updated)';
+
+ReactDOM.render(<App title={title} />, document.getElementById('app'));
+
+module.hot.accept();
