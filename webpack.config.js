@@ -1,6 +1,6 @@
 /* eslint-disable no-path-concat */
 module.exports = {
-  entry: './src/index.js',
+  entry: './src/client/index.js',
   module: {
     rules: [
       {
