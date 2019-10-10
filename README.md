@@ -1,4 +1,4 @@
-# MERN Boilerplate
+# MERN Starter
 
 Basic configuration for a webapp using a MERN stack with mongoose, nodemon and webpack hot reloading, and Jest for testing.
 
