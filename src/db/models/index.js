@@ -1,9 +1,7 @@
-import mongoose from 'mongoose';
-
-import User from './user';
-
+const mongoose = require('mongoose')
+const User = require('./user')
 const connectDb = () => mongoose.connect(process.env.DATABASE_URL);
 
 const models = { User };
-export { connectDb };
-export default models;
+
+module.exports = { models, connectDb }

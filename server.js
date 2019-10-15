@@ -1,9 +1,10 @@
-import express from 'express';
-import cors from 'cors';
-import 'dotenv/config';
-import routes from './routes';
+const express = require('express');
+const cors = require('cors');
+require('dotenv/config');
+const routes = require('./src/server/routes');
+const path = require('path')
 
-import models, { connectDb } from '../db/models/index';
+const { connectDb } = require('./src/db/models/index');
 
 const app = express();
 
@@ -24,7 +25,7 @@ app.put('/', (req, res) => res.send('Received PUT request'));
 app.delete('/', (req, res) => res.send('Received DELETE request'));
 
 app.get('*', (req, res) => {
-  res.send('catchall GET');
+  res.sendFile(path.join(__dirname, 'dist', 'index.html'))
 });
 
 // connectDb().then(async () => {
