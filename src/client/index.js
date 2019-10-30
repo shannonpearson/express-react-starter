@@ -4,8 +4,6 @@ import ReactDOM from 'react-dom';
 
 import App from './App';
 
-const title = 'React with Weback and Babel (updated)';
-
-ReactDOM.render(<App title={title} />, document.getElementById('app'));
+ReactDOM.render(<App />, document.getElementById('app'));
 
 module.hot.accept();
