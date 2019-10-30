@@ -5,9 +5,10 @@
   "main": "server.js",
   "scripts": {
     "test": "jest",
-    "dev": "nodemon --exec babel-node src/server/index.js",
-    "start": "node index.js",
-    "webpack": "webpack-dev-server --config ./webpack.config.js --mode development"
+    "dev": "node dev-server.js",
+    "build": "parcel build index.html",
+    "start": "nodemon server.js",
+    "server": "node server.js"
   },
   "author": "",
   "license": "ISC",
