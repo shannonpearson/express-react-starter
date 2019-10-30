@@ -1,6 +1,6 @@
 # MERN Starter
 
-Basic configuration for a webapp using a MERN stack with mongoose, nodemon and webpack hot reloading, and Jest for testing.
+Basic configuration for a webapp using a MERN stack with mongoose, nodemon and parcel, and Jest for testing.
 
 ## Installation
 
@@ -14,9 +14,9 @@ npm install
 
 Test: `npm run test`
 Start server: `npm run start`
-Start client: `npm run webpack`
+Start client dev server: `npm run dev`
 
-If connecting to a MongoDB, replace DATABASE_URL in .env (and remember to add .env to gitignore) and uncomment connectDb() in server/index.js.
+If connecting to a MongoDB, replace DATABASE_URL in .env and uncomment connectDb() import and call in server/index.js.
 
 ## Contributing
 
