@@ -13,7 +13,9 @@ npm install
 ## Usage
 
 Test: `npm run test`
+
 Start server: `npm run start`
+
 Start client dev server: `npm run dev`
 
 If connecting to a MongoDB, replace DATABASE_URL in .env and uncomment connectDb() import and call in server/index.js.
