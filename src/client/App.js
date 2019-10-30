@@ -1,7 +1,7 @@
 /* eslint-disable react/jsx-filename-extension */
 import React from 'react';
-import Home from './components/Home';
+import RouterComponent from './Router';
 
-const App = () => <div><Home /></div>;
+const App = () => <div><RouterComponent /></div>;
 
 export default App;
