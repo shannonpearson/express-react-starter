@@ -5,7 +5,7 @@ const path = require('path');
 const bodyParser = require('body-parser');
 const routes = require('./src/server/routes/index');
 
-const { connectDb } = require('./src/db/models/index');
+// const { connectDb } = require('./src/db/models/index');
 
 const app = express();
 
@@ -23,7 +23,7 @@ app.get('*', (req, res) => {
   res.sendFile(path.join(__dirname, 'dist', 'index.html'));
 });
 
-connectDb().then(async () => {
-  console.log('Connected to database');
-  app.listen(port, () => console.log(`app listening on port ${port}`));
-});
+// connectDb().then(async () => {
+//   console.log('Connected to database');
+app.listen(port, () => console.log(`app listening on port ${port}`));
+// });
