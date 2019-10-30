@@ -5,11 +5,12 @@
     "node": true,
     "jest": true
   },
-  "extends": ["airbnb"],
+  "extends": ["airbnb", "plugin:react/recommended"],
   "globals": {
     "Atomics": "readonly",
     "SharedArrayBuffer": "readonly"
   },
+  "parser": "babel-eslint",
   "parserOptions": {
     "ecmaFeatures": {
       "jsx": true
@@ -17,9 +18,13 @@
     "ecmaVersion": 2018,
     "sourceType": "module"
   },
-  "plugins": ["react", "jest"],
+  "plugins": ["react", "jest", "import"],
   "rules": {
     "semi": ["error", "always"],
-    "react/jsx-filename-extension": "off"
+    "react/jsx-filename-extension": "off",
+    "no-underscore-dangle": "off",
+    "react/static-property-placement": "off",
+    "react/forbid-prop-types": "off",
+    "react/destructuring-assignment": "off"
   }
 }
